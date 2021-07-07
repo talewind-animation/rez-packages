@@ -1,0 +1,22 @@
+Gizmo {
+ inputs 0
+ tile_color 0x191919ff
+ addUserKnob {20 User}
+ addUserKnob {41 file l File T snap_read.file}
+}
+ Read {
+  inputs 0
+  file_type jpeg
+  origset true
+  name snap_read
+  tile_color 0x222222ff
+  xpos -24
+  ypos -460
+  postage_stamp false
+ }
+ Output {
+  name Output1
+  xpos -24
+  ypos -360
+ }
+end_group

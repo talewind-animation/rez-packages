@@ -1,4 +1,6 @@
 build
+pgBokeh*
+OFX
 *.pyc
 __pycache__
 packages/**
