@@ -2,7 +2,7 @@
 # of the local package.
 
 name = "maya"
-version = "2020.2.1"
+version = "2022.0.1"
 requires = [
         "quicktime",
     ]
@@ -34,7 +34,6 @@ def commands():
     env["MAYA_DISABLE_CER"] = "Yes"
     env["PYMEL_SKIP_MEL_INIT"] = "Yes"
     env["LC_ALL"] = "C"                   # Mute color management warnings
-    env["MAYA_NO_CONSOLE_WINDOW"] = "Yes"
 
     exes = ["maya", "mayapy", "mayabatch", "render"]
     ext = ""

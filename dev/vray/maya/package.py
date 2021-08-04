@@ -1,7 +1,7 @@
 # An example of a package referencing something from outside
 # of the local package.
 name = "vray"
-version = "5.00.22"
+version = "5.10.21"
 
 authors = ['Choas Group']
 
@@ -9,17 +9,12 @@ build_command = "python -m rezutil build {root}"
 private_build_requires = ["rezutil-1",]
 
 requires = [
-    "~maya",
+    "maya-2022",
 ]
 
 description = """
     Production-proven ray traced rendering with a full suite of tools
     to create professional photoreal imagery and animations."""
-
-variants = [
-    ["maya-2017"],
-    ["maya-2020"],
-]
 
 tools = [
     "vray",
@@ -39,9 +34,10 @@ def commands():
     env.VRAY_AUTH_CLIENT_FILE_PATH = "{root}/resources"
     env.VRAY_SEND_FEEDBACK = "0"
 
-    env.PATH.append("{root}/resources/maya_root/bin")
+    env.PATH.append("{root}/resources/maya_vray/bin/hostbin")
+    env.PATH.append("{root}/resources/maya_vray/bin")
     env.PATH.append("{root}/resources/vray/lib")
-    env.MAYA_RENDER_DESC_PATH.append("{root}/resources/maya_root/bin/rendererDesc")
+    env.MAYA_RENDER_DESC_PATH.append("{root}/resources/maya_vray/rendererDesc")
     env.MAYA_PLUG_IN_PATH.append("{root}/resources/maya_vray/plug-ins")
     env.MAYA_SCRIPT_PATH.append("{root}/resources/maya_vray/scripts")
     env.MAYA_PRESET_PATH.append("{root}/resources/maya_vray/presets")
