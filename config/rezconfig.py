@@ -15,9 +15,9 @@ packages_path = [
     twa_rez_pkgs,
 ]
 
-local_packages_path = twa_rez_pkgs
+local_packages_path = os.path.expanduser("~\\packages")
 # Destination paths, during `rez build --install --release`
-release_packages_path = packages_path[0]
+release_packages_path = twa_rez_pkgs
 
 # These packages are typically overly specific to your platform
 # These maps allow for e.g. `windows-10.0.1803` packages to run
